@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /*Variaveis*/
 :root {
@@ -8,17 +10,17 @@
     --cor-secun-clara:#FD9CA3;
     --cor-fundo: #333333;
     --cor-fundo-clara: #555555;
-    --cor-texto: #CCCCCC;
+    --cor-texto: #EEEEEE;
+    --font-texto: 'IBM Plex Sans', sans-serif;
+    --font-titulo: 'Playfair Display', serif;
 }
 
 
 * {
-    font-family: Calibri, Arial, sans-serif;
+    font-family: var(--font-texto)sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
 }
 header{
     display: flex;
@@ -84,8 +86,46 @@ article{
     min-height: 85px;
     width: 100%;
 }
+#Menu-Principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var (--cor-secun);
+    min-height: 25px;
+    width: 100%;
+}
+#Menu-Principal ul {
+    list-style: none;/* tira decoração da lista */
+    display: flex;/*todos os filhos na horizontal*/
+    align-items: stretch;
+}
+#Menu-Principal ul li {
+    height: 36px;
+    margin: 0 10px;
+    display: flex;
+    
+}
+#Menu-Principal ul li a {
+    font-family: var(--font-titulo);
+    height: 36px;
+    align-items: center;
+    display: flex;
+    padding: 0 10px;
+    color: var(--cor-texto);
+    text-decoration: none;
+    background-color: var(--cor-secun);
+    transition: 300ms;
+}
+/*Quando o mouse passa sobre o link do menu*/
+#Menu-Principal ul li a:hover {
+    filter: brightness(1.2);
+}
+
 @media screen and (max-width: 600px) {
+    
     main{
+        display: flex;
+        justify-content: center;
         flex-direction: column;
         }
 
